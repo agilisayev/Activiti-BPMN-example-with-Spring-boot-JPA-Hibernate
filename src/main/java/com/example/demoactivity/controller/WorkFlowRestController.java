@@ -44,7 +44,7 @@ public class WorkFlowRestController {
     }
 
     @GetMapping("/next/{id}/{planType}")
-    public String test(@PathVariable String id, @PathVariable Boolean planType) {
+    public String approve(@PathVariable String id, @PathVariable Boolean planType) {
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
         TaskService taskService = processEngine.getTaskService();
         Task task = taskService.createTaskQuery().taskId(id).singleResult();

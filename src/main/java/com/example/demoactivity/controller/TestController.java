@@ -105,12 +105,10 @@ public class TestController {
         variables.put("keepInForce", line);
         variables.put("payPenalty", line);
         variables.put("sendDsmfPenaltyOrderBPS07", line);
-
         variables.put("assigneeMufettish", "assigneeMufettish");
         variables.put("assigneeMuhafizeSobeMuduru", "assigneeMuhafizeSobeMuduru");
         variables.put("addOrderPain", false);
         variables.put("addOrderEnding", true);
-
         taskService.complete(task.getId(), variables);
         return "OK";
     }
