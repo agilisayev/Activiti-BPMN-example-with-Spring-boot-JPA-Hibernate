@@ -1,11 +1,10 @@
-package com.example.demoactivity.service;
+package com.example.demoactivity.model;
 
 import java.io.Serializable;
 
-public class User implements Serializable {
+public class Users  implements Serializable {
 
     private String username;
-
 
     public String getUsername() {
         return username;

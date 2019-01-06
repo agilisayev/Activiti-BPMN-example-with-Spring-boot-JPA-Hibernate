@@ -10,8 +10,13 @@ import java.util.List;
 @Service
 public class TaskService {
 
-    @Autowired
-    TaskRespository taskRespository;
+
+   private  final TaskRespository taskRespository;
+
+   @Autowired
+    public TaskService(TaskRespository taskRespository) {
+        this.taskRespository = taskRespository;
+    }
 
     public Task findById(Long id){
         return taskRespository.findOne(id);
