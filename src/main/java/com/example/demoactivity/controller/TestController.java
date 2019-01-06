@@ -87,8 +87,8 @@ public class TestController {
         return "OK";
     }
 
-    @GetMapping("/next1/{id}/{line2}")
-    public String test2(@PathVariable String id, @PathVariable Boolean line) {
+    @GetMapping("/next2/{id}/{line2}")
+    public String next2(@PathVariable String id, @PathVariable Boolean line) {
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
         TaskService taskService = processEngine.getTaskService();
         Task task = taskService.createTaskQuery().taskId(id).singleResult();
